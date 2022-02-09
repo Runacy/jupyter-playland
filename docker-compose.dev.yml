@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/application
+    container_name: jupyter-lab
+    image: jupyter-lab-img
+    ports:
+      - "5555:5000"
+    tty: true
