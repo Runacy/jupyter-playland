@@ -1,7 +1,7 @@
 container=jupyter-lab
 
 up:
-	docker-compose up -f docker-compose.dev.yml --build -d
+	docker-compose up --build -d
 
 into:
 	docker exec -it ${container} bash
